@@ -1,0 +1,43 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+parameters:
+
+# Imports
+imports:
+    - { resource: 'randomuser_api/importer.yaml' }
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        bind:
+            $params: '@parameter_bag'
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # Command
+    App\Command\ImportUsers:
+        autowire: true,
+        autoconfigure: true,
+        tags:
+            - name: 'console.command'
+        arguments:
+            $randomUserApi: '@App\Service\RandomUserApiService'
+            $customer: '@App\Service\CustomerService'
+
+    # Listeners
+    App\EventListener\ExceptionListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
+
+    # Services
+    App\Service\RandomUserApiService: ~
+
+    App\Service\CustomerService:
+        arguments:
+            $entityManager: '@Doctrine\ORM\EntityManagerInterface'
