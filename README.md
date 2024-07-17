@@ -93,8 +93,8 @@ https://randomuser.me/documentation#incexc
 
     Then use the ff methods to import and persist:
 
-        $this->randomUserApi->get($resultLimit, $filterNationality);
+        $randomUserApi->get($resultLimit, $filterNationality);
         foreach ($importedUsers as $importedUser)
         {
-            $this->customer->insert($importedUser);
+            $customerService->insert($importedUser);
         }
