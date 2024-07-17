@@ -65,8 +65,8 @@ https://randomuser.me/documentation#incexc
 
 2. If used in a non-Controller class, instantiate both classes in the __construct
 
-   private RandomUserApiService $randomUserApi;
-   private CustomerService $customer;
+        private RandomUserApiService $randomUserApi;
+        private CustomerService $customer;
 
         public function __construct(RandomUserApiService $randomUserApi, CustomerService $customer, ParameterBagInterface $params)
         {
@@ -82,7 +82,7 @@ https://randomuser.me/documentation#incexc
             $this->customer->insert($importedUser);
         }
 
-3. If used in a Controller class, add them as a parameter in any method:
+4. If used in a Controller class, add them as a parameter in any method:
 
         public function someMethod(
            RandomUserApiService $randomUserApi,
