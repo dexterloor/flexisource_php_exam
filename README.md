@@ -25,9 +25,9 @@ Note: If you do not have composer installed globally, follow these instructions:
     * change root:root to the username and password you're using for your MySQL database
     * change 127.0.0.1:3306 to the hostname:port you're using for your MySQL database server
 
-6. Generate migrations for this app by executing the command `bin/console migrations:make`
+6. Generate migrations for this app by executing the command `bin/console make:migration`
 7. Run the migrations to create the schema (database tables) by executing the command `bin/console doctrine:migrations:migrate`
-8. Execute PHPUnit Tests to make sure all are working correctly by running this command: `vendor/bin/phpunit`
+8. Execute PHPUnit Tests to make sure all are working correctly by running this command: `./vendor/bin/phpunit`
     
 ## How to run the Importer as a command
 1. Open a terminal and cd to the repository directory (root of the Symfony app)
