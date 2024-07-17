@@ -1,0 +1,37 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+composer.lock
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+# Ignore PhpStorm files
+/.idea/
+*.iml
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific files
+/.phpstorm.meta.php
+
+# Ignore sensitive environment variables that may be in the .env file
+/.env.local.php
+
+# Ignore PHPStorm project files
+/.phpstorm.meta.php
+
+# Ignore Symfony's local web server file
+/.symfony/
+
