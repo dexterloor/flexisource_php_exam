@@ -60,10 +60,10 @@ https://randomuser.me/documentation#incexc
 
 ## Using the importer on other parts of the application aside from the Command
 1. In a controller or a service, include the ff classes:
-        use App\Service\RandomUserApiService;
-        use App\Service\CustomerService;
+        * App\Service\RandomUserApiService;
+        * App\Service\CustomerService;
 
-2. If used in a non-Controller class, instantiate both classes in the __construct
+3. If used in a non-Controller class, instantiate both classes in the __construct
 
         private RandomUserApiService $randomUserApi;
         private CustomerService $customer;
