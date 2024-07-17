@@ -50,8 +50,8 @@ https://randomuser.me/documentation#incexc
 2. Run the command `symfony serve`
 
 ### via any Web Browser
-1. GET /customers: Open any browser and type in: `http://127.0.0.1/customers` (assuming symfony serve command gives you 127.0.0.1 as the app URL)
-2. GET /customers/{customerId}: Open any browser and type in: `http://127.0.0.1/customers/2` (assuming symfony serve command gives you 127.0.0.1 as the app URL)
+1. GET /customers: Open any browser and type in: `http://127.0.0.1:8000/customers` (assuming symfony serve command gives you 127.0.0.1 as the app URL)
+2. GET /customers/{customerId}: Open any browser and type in: `http://127.0.0.1:8000/customers/2` (assuming symfony serve command gives you 127.0.0.1 as the app URL)
 
 ### via Postman
 1. Create a Postman Collection with 2 requests:
